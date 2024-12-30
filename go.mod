@@ -1,4 +1,4 @@
-module github.com/NetParmad/Go-Dev-101
+module github.com/NetParamad/Go-Dev-101
 
 go 1.23.4
 
