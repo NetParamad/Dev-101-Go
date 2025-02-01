@@ -1,6 +1,7 @@
 package config
 
 import (
+	_ "github.com/go-sql-driver/mysql"
 
 )
 
@@ -9,16 +10,15 @@ type Config struct {
 	Port     string
 	User     string
 	Password string
-	DBName   string
+	Dbname   string
 }
 
-func DBConfig() *Config {
+func ConnectDB() (*Config, error) {
 	return &Config{
 		Host:     "localhost",
 		Port:     "3306",
-		User:     "myuser",
-		Password: "mypassword",
-		DBName:   "mydatabase",
-	}
+		User:     "root",
+		Password: "",
+		Dbname:   "test",
+	}, nil
 }
- 
